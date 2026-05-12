@@ -1,18 +1,48 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/01ktq8mj4pm9vnkm?svg=true)](https://ci.appveyor.com/project/Professor-Severus-Snape/fe-diploma)
+[![CI/CD](https://github.com/professor-severus-snape/railway-ticket-booking-system/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/professor-severus-snape/railway-ticket-booking-system/actions/workflows/ci-cd.yml)
 
 # «Система бронирования ж/д билетов»
 
-1. Проект является выпускной дипломной работой к профессии "Frontend-разработчик" (Нетология).
-2. Ссылка на задание - [здесь](https://github.com/netology-code/fe-2-diplom).
-3. Ссылка на макеты в Figma - [здесь](https://www.figma.com/design/uGozdf1aXLw0SSV4lOK8B7/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC-FE?node-id=0-1&m=dev&t=fBR759qFNHJhigzU-1).
-4. Сборка проекта - утилита VITE.
-5. CI/CD - AppVeyor с развертыванием на GitHub Pages.
-6. Проект представляет из себя SPA.
-7. Используемые технологии - HTML, CSS, TypeScript, React, React Router, Redux Toolkit, ESLint.
-8. Реализована адаптивная (≥ 768px) кроссбраузерная pixel perfect вёрстка.
-9. Вёрстка выполнена в соответствии с методологией БЭМ.
-10. Валидация кода - через [валидатор HTML](https://validator.w3.org/) и [валидатор CSS](https://jigsaw.w3.org/css-validator/).
-11. Проверка производительности - через [PageSpeed Insights](https://pagespeed.web.dev/).
-12. Бэкенд целиком предоставлен Нетологией и на момент написания дипломной работы, к сожалению, отдает множество некорректных данных. По этой причине логика проекта была местами пересмотрена, часть данных сгенерирована заново на стороне фронтенда, часть (например, верхние и нижние места в сидячем вагоне и вагонах класса СВ) оставлена без изменений с надеждой на доработку бэкенда Нетологией в будущем.
-13. Авторские права защищены лицензией MIT. Любое использование данного проекта должно сопровождаться 
-   уведомлениями об авторских правах и лицензией.
+SPA-приложение для поиска маршрутов и бронирования железнодорожных билетов.
+
+Проект включает выбор направлений, просмотр поездов, выбор мест в вагонах и оформление заказа.
+
+![Railway ticket booking system](./docs/preview.png)
+
+## Демо
+
+Посмотреть демо можно [здесь](https://professor-severus-snape.github.io/railway-ticket-booking-system/).
+
+## Особенности проекта
+
+- адаптивная кроссбраузерная вёрстка (≥ 768px)
+- pixel perfect реализация интерфейса
+- методология БЭМ
+- SPA-архитектура
+- управление состоянием через Redux Toolkit
+- маршрутизация через React Router
+- валидация [HTML](https://validator.w3.org/) и [CSS](https://jigsaw.w3.org/css-validator/)
+- проверка производительности через [PageSpeed Insights](https://pagespeed.web.dev/)
+
+## Технологии
+
+- React
+- маршрутизация - React Router
+- глобальный стейт менеджер - Redux Toolkit
+- типизация - TypeScript
+- линтинг - ESLint
+- сборка - Vite
+
+## CI/CD
+
+- GitHub Actions - линтинг и сборка проекта (CI)
+- GitHub Pages - автоматический деплой приложения (CD)
+
+## Сервер
+
+Проект использует сторонний сервер API.
+
+Сервер работает нестабильно: периодически может отдавать некорректные данные, не возвращать часть информации или быть временно недоступным. По этой причине часть логики и данных была дополнительно обработана на стороне клиента.
+
+## Лицензия
+
+Проект распространяется по лицензии MIT.
