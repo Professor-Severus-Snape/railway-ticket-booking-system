@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import { setLimitedMobility } from '../../redux/passengersSlice';
 import './limitedMobility.css';
 

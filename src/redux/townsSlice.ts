@@ -1,5 +1,6 @@
 import { buildCreateSlice, asyncThunkCreator } from '@reduxjs/toolkit';
-import { ITown } from '../models/models';
+import { API_URL } from '../config';
+import type { ITown } from '../models/models';
 
 // ответ по запросу 'https://students.netoservices.ru/fe-diplom/routes/cities?name=мо':
 // [
@@ -43,11 +44,10 @@ const townsSlice = createSliceWithThunk({
     fetchTowns: creators.asyncThunk<ITown[] | { error: string }, string>(
       async (queryParamValue, { rejectWithValue }) => {
         try {
-          const baseUrl = import.meta.env.VITE_BASE_URL;
           const route = '/routes/cities';
           const queryParam = `name=${queryParamValue}`;
 
-          const response = await fetch(baseUrl + route + '?' + queryParam);
+          const response = await fetch(API_URL + route + '?' + queryParam);
 
           if (!response.ok) {
             return rejectWithValue('Ошибка при получении данных от сервера...');
@@ -61,27 +61,22 @@ const townsSlice = createSliceWithThunk({
       {
         fulfilled: (state, action) => {
           // в action.payload может прийти объект {error: 'Поле name обязательно для заполнения'}
-          state.towns =
-            'error' in action.payload ? initialState.towns : action.payload;
+          state.towns = 'error' in action.payload ? initialState.towns : action.payload;
         },
         rejected: (state) => {
           state.towns = initialState.towns;
         },
-      }
+      },
     ),
     setIsClicked: creators.reducer((state, action: { payload: boolean }) => {
       state.isClicked = action.payload;
     }),
-    setIsOpenedStartList: creators.reducer(
-      (state, action: { payload: boolean }) => {
-        state.isOpenedStartList = action.payload;
-      }
-    ),
-    setIsOpenedEndList: creators.reducer(
-      (state, action: { payload: boolean }) => {
-        state.isOpenedEndList = action.payload;
-      }
-    ),
+    setIsOpenedStartList: creators.reducer((state, action: { payload: boolean }) => {
+      state.isOpenedStartList = action.payload;
+    }),
+    setIsOpenedEndList: creators.reducer((state, action: { payload: boolean }) => {
+      state.isOpenedEndList = action.payload;
+    }),
   }),
 });
 

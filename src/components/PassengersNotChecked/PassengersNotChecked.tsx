@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import { openModal } from '../../redux/modalSlice';
 import NextPassenger from '../NextPassenger/NextPassenger';
 import './passengersNotChecked.css';

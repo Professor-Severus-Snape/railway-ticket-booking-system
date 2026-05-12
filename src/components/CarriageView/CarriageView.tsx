@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import {
   setArrivalOrder,
   setArrivalCurrentTypeCarriagesList,
@@ -16,8 +16,8 @@ import {
   setDepartureChildrenCount,
   setDepartureBabyCount,
 } from '../../redux/departureSlice';
-import { RootState } from '../../redux/store';
-import { ICarriage, IOrder } from '../../models/models';
+import type { RootState } from '../../redux/store';
+import type { ICarriage, IOrder } from '../../models/models';
 import CarriageCompartment from '../CarriageCompartment/CarriageCompartment';
 import CarriageLux from '../CarriageLux/CarriageLux';
 import CarriagePlatzkart from '../CarriagePlatzkart/CarriagePlatzkart';

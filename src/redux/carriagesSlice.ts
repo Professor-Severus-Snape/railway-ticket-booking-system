@@ -1,6 +1,7 @@
 import { buildCreateSlice, asyncThunkCreator } from '@reduxjs/toolkit';
 import transformCarriagesPayload from '../libs/transformCarriagesPayload';
-import { ICarriage } from '../models/models';
+import { API_URL } from '../config';
+import type { ICarriage } from '../models/models';
 
 // ответ по запросу 'https://students.netoservices.ru/fe-diplom/routes/67ceb8c28c75f00047cb0db0/seats':
 
@@ -61,11 +62,8 @@ const carriagesSlice = createSliceWithThunk({
     fetchForwardCarriages: creators.asyncThunk<ICarriage[], string>(
       async (id, { rejectWithValue }) => {
         try {
-          const baseUrl = import.meta.env.VITE_BASE_URL;
           const route = `/routes/${id}/seats`;
-
-          const request = baseUrl + route;
-
+          const request = API_URL + route;
           const response = await fetch(request);
 
           if (!response.ok) {
@@ -92,17 +90,14 @@ const carriagesSlice = createSliceWithThunk({
         settled: (state) => {
           state.forwardCarriagesLoading = false;
         },
-      }
+      },
     ),
     // асинхронный экшен на вход принимает строку 'id' и возвращает action.payload вида ICarriage[]:
     fetchBackwardCarriages: creators.asyncThunk<ICarriage[], string>(
       async (id, { rejectWithValue }) => {
         try {
-          const baseUrl = import.meta.env.VITE_BASE_URL;
           const route = `/routes/${id}/seats`;
-
-          const request = baseUrl + route;
-
+          const request = API_URL + route;
           const response = await fetch(request);
 
           if (!response.ok) {
@@ -129,15 +124,12 @@ const carriagesSlice = createSliceWithThunk({
         settled: (state) => {
           state.backwardCarriagesLoading = false;
         },
-      }
+      },
     ),
   }),
 });
 
-export const {
-  fetchForwardCarriages,
-  fetchBackwardCarriages,
-  resetCarriagesSlice,
-} = carriagesSlice.actions;
+export const { fetchForwardCarriages, fetchBackwardCarriages, resetCarriagesSlice } =
+  carriagesSlice.actions;
 
 export default carriagesSlice.reducer;

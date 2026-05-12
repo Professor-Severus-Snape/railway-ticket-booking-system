@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { setIsOpen } from '../../redux/passengersSlice';
 import NextPassenger from '../NextPassenger/NextPassenger';
 import success from '../../assets/success.svg';

@@ -3,7 +3,7 @@ import { fromUnixTime } from 'date-fns';
 import getClassInfo from '../../libs/getClassInfo';
 import getDuration from '../../libs/getDuration';
 
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { resetArrivalSlice } from '../../redux/arrivalSlice';
 import { resetDepartureSlice } from '../../redux/departureSlice';
 

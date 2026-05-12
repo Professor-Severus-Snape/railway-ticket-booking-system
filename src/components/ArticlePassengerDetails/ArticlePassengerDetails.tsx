@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { setArticlePassengerCheckboxDetails } from '../../redux/checkboxDetailsSlice';
 import passenger from '../../assets/passenger.svg';
 import './articlePassengerDetails.css';

@@ -1,4 +1,5 @@
 import { buildCreateSlice, asyncThunkCreator } from '@reduxjs/toolkit';
+import { API_URL } from '../config';
 
 interface IInitialState {
   orderData: { status: boolean };
@@ -28,9 +29,8 @@ const orderSlice = createSliceWithThunk({
     // асинхронный экшен на вход принимает stringify от объекта data и возвращает action.payload вида {status: boolean}:
     sendOrder: creators.asyncThunk<{ status: boolean }, string>(
       async (data, { rejectWithValue }) => {
-        const baseUrl = import.meta.env.VITE_BASE_URL;
         const route = '/order';
-        const request = baseUrl + route;
+        const request = API_URL + route;
 
         const options = {
           method: 'POST',

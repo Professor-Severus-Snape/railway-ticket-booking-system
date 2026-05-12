@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { openModal } from '../../redux/modalSlice';
 import { sendOrder } from '../../redux/orderSlice';
 import useGetFinalData from '../../hooks/useGetFinalData';

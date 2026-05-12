@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ICarriage, IOrder } from '../models/models';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { ICarriage, IOrder } from '../models/models';
 
 interface IDepartureState {
   route_direction_id: string;

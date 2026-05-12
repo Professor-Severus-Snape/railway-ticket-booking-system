@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
+import type { RootState } from '../../redux/store';
 import CarriageFeatures from '../CarriageFeatures/CarriageFeatures';
 import CarriageView from '../CarriageView/CarriageView';
 import './carriage.css';

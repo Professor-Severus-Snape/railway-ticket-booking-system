@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
+import type { RootState } from '../../redux/store';
 import wiFi from '../../assets/wi-fi.svg';
 import express from '../../assets/express.svg';
 import tea from '../../assets/tea.svg';

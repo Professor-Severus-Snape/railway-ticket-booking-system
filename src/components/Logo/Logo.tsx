@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import logo from '../../assets/logo.svg';
 import './logo.css';
 import { resetArrivalSlice } from '../../redux/arrivalSlice';

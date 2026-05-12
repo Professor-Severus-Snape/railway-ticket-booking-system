@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import { resetArrivalSlice } from '../../redux/arrivalSlice';
 import { resetCarriagesSlice } from '../../redux/carriagesSlice';
 import { resetCheckboxDetailsSlice } from '../../redux/checkboxDetailsSlice';

@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import useGetTotalPrice from '../../hooks/useGetTotalPrice';
-import { RootState } from '../../redux/store';
+import type { RootState } from '../../redux/store';
 import ChangeData from '../ChangeData/ChangeData';
 import TitleCheck from '../TitleCheck/TitleCheck';
 import avatar from '../../assets/avatar.svg';

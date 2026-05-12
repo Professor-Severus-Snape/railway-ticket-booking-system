@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
+import type { RootState } from '../../redux/store';
 import useGetTotalPrice from '../../hooks/useGetTotalPrice';
 import GoHome from '../GoHome/GoHome';
 import Stars from '../Stars/Stars';

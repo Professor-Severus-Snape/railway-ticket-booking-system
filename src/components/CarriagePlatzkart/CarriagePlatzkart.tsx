@@ -1,4 +1,4 @@
-import { IMyCarriageProps } from '../../models/models';
+import type { IMyCarriageProps } from '../../models/models';
 import CarriageNumber from '../CarriageNumber/CarriageNumber';
 import CarriageTotalPrice from '../CarriageTotalPrice/CarriageTotalPrice';
 import PotentialPassengers from '../PotentialPassengers/PotentialPassengers';
@@ -24,14 +24,7 @@ const CarriagePlatzkart = ({ data }: { data: IMyCarriageProps }) => {
   } = data;
 
   const priceTooltip = (num: number) => {
-    let price = 0;
-
-    if (num > 32) {
-      price = side_price;
-    } else {
-      price = num % 2 ? bottom_price : top_price;
-    }
-
+    const price = num > 32 ? side_price : num % 2 ? bottom_price : top_price;
     const wifi = have_wifi ? wiFiPrice : 0;
     const linens = !is_linens_included ? linensPrice : 0;
     const priceWithFeatures = price + wifi + linens;
@@ -43,11 +36,7 @@ const CarriagePlatzkart = ({ data }: { data: IMyCarriageProps }) => {
     <div className="carriage-platzkart">
       <PotentialPassengers />
 
-      <img
-        className="carriage-platzkart__img"
-        src={carriagePlatzkart}
-        alt="platzkart"
-      />
+      <img className="carriage-platzkart__img" src={carriagePlatzkart} alt="platzkart" />
 
       <CarriageNumber carriageNumber={carriage_number} />
 
@@ -63,12 +52,7 @@ const CarriagePlatzkart = ({ data }: { data: IMyCarriageProps }) => {
             title={priceTooltip(seat.index).toLocaleString('ru-RU')}
             onClick={
               seat.available || seat.isActive
-                ? () =>
-                    onSeatClick(
-                      seat.index,
-                      priceTooltip(seat.index),
-                      seat.isActive
-                    )
+                ? () => onSeatClick(seat.index, priceTooltip(seat.index), seat.isActive)
                 : undefined
             }
           >

@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { format, isSameDay } from 'date-fns';
 
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { resetArrivalSlice } from '../../redux/arrivalSlice';
 import { resetDepartureSlice } from '../../redux/departureSlice';
 import { fetchLastTickets } from '../../redux/lastTicketsSlice';

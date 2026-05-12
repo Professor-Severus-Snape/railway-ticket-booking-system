@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import getRandomNumber from '../../libs/getRandomNumber';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { setArrivalRouteDestinationId } from '../../redux/arrivalSlice';
 import {
   fetchForwardCarriages,

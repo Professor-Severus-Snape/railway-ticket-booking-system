@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import { resetArrivalSlice } from '../../redux/arrivalSlice';
 import { resetDepartureSlice } from '../../redux/departureSlice';
 

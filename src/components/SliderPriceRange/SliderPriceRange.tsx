@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { resetArrivalSlice } from '../../redux/arrivalSlice';
 import { resetDepartureSlice } from '../../redux/departureSlice';
 import { setMinPrice, setMaxPrice } from '../../redux/paramsSlice';

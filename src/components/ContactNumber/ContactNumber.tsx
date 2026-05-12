@@ -1,6 +1,6 @@
 import PhoneInput from 'react-phone-number-input'; // либа для телефонов -> маска + позиция курсора
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import { setPaymentPhoneNumber } from '../../redux/paymentSlice';
 import 'react-phone-number-input/style.css'; // импорт стилей либы для телефонов
 import './contactNumber.css';

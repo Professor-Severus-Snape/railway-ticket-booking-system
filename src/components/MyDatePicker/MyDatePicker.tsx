@@ -5,7 +5,7 @@ import DatePicker from 'react-datepicker'; // библиотека react-datepic
 import { addDays, format, isSameDay } from 'date-fns'; // библиотека date-fns -> валидация даты
 import { ru } from 'date-fns/locale';
 
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { resetArrivalSlice } from '../../redux/arrivalSlice';
 import { resetDepartureSlice } from '../../redux/departureSlice';
 import { setParamEndDate, setParamStartDate } from '../../redux/paramsSlice';

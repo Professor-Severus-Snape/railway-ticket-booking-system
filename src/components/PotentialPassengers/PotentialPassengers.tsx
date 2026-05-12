@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import getDeclinedPeople from '../../libs/getDeclinedPeople';
-import { RootState } from '../../redux/store';
+import type { RootState } from '../../redux/store';
 import './potentialPassengers.css';
 
 const PotentialPassengers = () => {

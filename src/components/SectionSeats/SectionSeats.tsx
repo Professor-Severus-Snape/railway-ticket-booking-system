@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { openModal } from '../../redux/modalSlice';
 import { setPassengersList } from '../../redux/passengersSlice';
 import ArticleSeat from '../ArticleSeat/ArticleSeat';

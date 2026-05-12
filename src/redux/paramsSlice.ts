@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ITown } from '../models/models';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { ITown } from '../models/models';
 
 interface IParamsSliceState {
   paramStartTown: ITown | null;

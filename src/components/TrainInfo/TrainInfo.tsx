@@ -1,6 +1,6 @@
 import { fromUnixTime } from 'date-fns';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
+import type { RootState } from '../../redux/store';
 import getDeclinedHours from '../../libs/getDeclinedHours';
 import getDeclinedMinutes from '../../libs/getDeclinedMinutes';
 import arrowLeft from '../../assets/arrow-left.svg';

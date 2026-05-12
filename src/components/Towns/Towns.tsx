@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import {
   setStartTown,
   setStartTownTooltip,
@@ -14,7 +14,7 @@ import {
   setIsOpenedEndList,
 } from '../../redux/townsSlice';
 
-import { ITown } from '../../models/models';
+import type { ITown } from '../../models/models';
 import './towns.css';
 
 const Towns = ({ isStart }: { isStart: boolean }) => {

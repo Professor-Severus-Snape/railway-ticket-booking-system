@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { openModal } from '../../redux/modalSlice';
 import ContactNumber from '../ContactNumber/ContactNumber';
 import Email from '../Email/Email';

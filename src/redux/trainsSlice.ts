@@ -1,5 +1,6 @@
 import { buildCreateSlice, asyncThunkCreator } from '@reduxjs/toolkit';
-import { ISearchParams, ITrain } from '../models/models';
+import { API_URL } from '../config';
+import type { ISearchParams, ITrain } from '../models/models';
 
 // ответ по запросу 'https://students.netoservices.ru/fe-diplom/routes?from_city_id=66ac8b69cb563f0052174f45&to_city_id=66ac8b69cb563f0052174f47&date_start=2025-03-10&date_end=2030-03-13':
 
@@ -122,12 +123,11 @@ const trainsSlice = createSliceWithThunk({
           const wifi = data.wifi ? '&have_wifi=true' : '';
           const express = data.express ? '&have_express=true' : '';
 
-          const baseUrl = import.meta.env.VITE_BASE_URL;
           const route = '/routes';
           const reqQueryParams = `?${fromCity}&${toCity}&${startDate}&${endDate}`;
           const optQueryParams = `${classes}${price}${hours}${wifi}${express}`;
 
-          const request = baseUrl + route + reqQueryParams + optQueryParams;
+          const request = API_URL + route + reqQueryParams + optQueryParams;
 
           // NOTE: Данные, получаемые с бэка, не всегда верные! Проблема, по-видимому, на сервере...
           // не срабатывают, в частности: 'startArrivalHourFrom', 'startArrivalHourTo', 'endArrivalHourFrom' и 'endArrivalHourTo', хотя запрос формируется верно..

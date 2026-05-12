@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
+import type { RootState } from '../../redux/store';
 import ArticleTicket from '../ArticleTicket/ArticleTicket';
 import TitleCheck from '../TitleCheck/TitleCheck';
 import './articleCheckTrain.css';

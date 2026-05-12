@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IPassenger } from '../models/models';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { IPassenger } from '../models/models';
 
 interface IPassengersState {
   passengersList: {

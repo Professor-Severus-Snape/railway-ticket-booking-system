@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { setArrivalActiveCarriageIndex } from '../../redux/arrivalSlice';
 import { setDepartureActiveCarriageIndex } from '../../redux/departureSlice';
 import Carriage from '../Carriage/Carriage';

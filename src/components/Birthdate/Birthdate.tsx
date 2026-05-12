@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import checkPassengerAge from '../../libs/checkPassengerAge';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import { setBirthdate } from '../../redux/passengersSlice';
 import './birthdate.css';
 

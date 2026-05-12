@@ -2,7 +2,7 @@ import getCarriageNumbers from './getCarriageNumbers';
 import getSeatTypesCountCompartment from './getSeatTypesCountCompartment';
 import getSeatTypesCountPlatzkart from './getSeatTypesCountPlatzkart';
 import transformCarriageSeats from './transformCarriageSeats';
-import { ICarriage } from '../models/models';
+import type { ICarriage } from '../models/models';
 
 const transformCarriagesPayload = (payload: ICarriage[]) => {
   // 1. создадим клон для преобразования полученных данных от сервера:

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { format, fromUnixTime } from 'date-fns';
 import getDuration from '../../libs/getDuration';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import { setArticleForwardCheckboxDetails } from '../../redux/checkboxDetailsSlice';
 import arrowRight from '../../assets/arrow-right.svg';
 import forward from '../../assets/forward.svg';

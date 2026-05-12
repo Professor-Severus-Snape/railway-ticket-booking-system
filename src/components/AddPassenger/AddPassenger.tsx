@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
+import type { AppDispatch } from '../../redux/store';
 import { addPassengerToList } from '../../redux/passengersSlice';
 import add from '../../assets/add.svg';
 import './addPassenger.css';

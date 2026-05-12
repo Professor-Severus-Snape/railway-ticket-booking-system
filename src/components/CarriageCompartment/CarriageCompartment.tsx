@@ -1,4 +1,4 @@
-import { IMyCarriageProps } from '../../models/models';
+import type { IMyCarriageProps } from '../../models/models';
 import CarriageNumber from '../CarriageNumber/CarriageNumber';
 import CarriageTotalPrice from '../CarriageTotalPrice/CarriageTotalPrice';
 import PotentialPassengers from '../PotentialPassengers/PotentialPassengers';

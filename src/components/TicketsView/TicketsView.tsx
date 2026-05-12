@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../redux/store';
+import type { AppDispatch, RootState } from '../../redux/store';
 import {
   setCurrentCount,
   setCurrentPage,
   setTrains,
 } from '../../redux/trainsSlice';
-import { ITrain } from '../../models/models';
+import type { ITrain } from '../../models/models';
 import './ticketsView.css';
 
 const TicketsView = () => {

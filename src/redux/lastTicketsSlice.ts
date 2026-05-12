@@ -1,5 +1,6 @@
 import { buildCreateSlice, asyncThunkCreator } from '@reduxjs/toolkit';
-import { ITrain } from '../models/models';
+import { API_URL } from '../config';
+import type { ITrain } from '../models/models';
 
 // ответ по запросу 'https://students.netoservices.ru/fe-diplom/routes/last':
 // [ITrain, ITrain, ITrain, ... ]
@@ -30,11 +31,8 @@ const lastTicketsSlice = createSliceWithThunk({
     fetchLastTickets: creators.asyncThunk<ITrain[]>(
       async (_, { rejectWithValue }) => {
         try {
-          const baseUrl = import.meta.env.VITE_BASE_URL;
           const route = '/routes/last';
-
-          const request = baseUrl + route;
-
+          const request = API_URL + route;
           const response = await fetch(request);
 
           if (!response.ok) {
