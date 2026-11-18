@@ -14,9 +14,10 @@ const Contacts = () => {
       content: 'inbox@mail.ru',
     },
     {
-      title: 'skype',
-      href: 'skype:tu.train.tickets',
+      title: 'telemost',
+      href: 'https://360.yandex.ru/telemost/',
       content: 'tu.train.tickets',
+      target: '_blank',
     },
     {
       title: 'maps',

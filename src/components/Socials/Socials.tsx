@@ -2,11 +2,11 @@ import './socials.css';
 
 const Socials = () => {
   const items = [
-    { id: 1, title: 'youtube', href: 'https://www.youtube.com' },
-    { id: 2, title: 'linkedin', href: 'https://www.linkedin.com' },
-    { id: 3, title: 'google', href: 'https://accounts.google.com' },
-    { id: 4, title: 'facebook', href: 'http://facebook.com' },
-    { id: 5, title: 'twitter', href: 'https://twitter.com' },
+    { id: 1, title: 'max', href: 'https://max.ru' },
+    { id: 2, title: 'vk', href: 'https://vk.ru' },
+    { id: 3, title: 'ok', href: 'https://ok.ru/' },
+    { id: 4, title: 'rutube', href: 'https://rutube.ru/' },
+    { id: 5, title: 'vk-video', href: 'https://vkvideo.ru' },
   ];
 
   return (

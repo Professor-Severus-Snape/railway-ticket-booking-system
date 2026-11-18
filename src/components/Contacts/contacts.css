@@ -38,13 +38,13 @@
   background-image: url("../../assets/mail-active.svg");
 }
 
-.contacts__link_skype {
-  background-image: url("../../assets/skype.svg");
+.contacts__link_telemost {
+  background-image: url("../../assets/telemost.svg");
 }
 
-.contacts__link_skype:focus,
-.contacts__link_skype:hover {
-  background-image: url("../../assets/skype-active.svg");
+.contacts__link_telemost:focus,
+.contacts__link_telemost:hover {
+  background-image: url("../../assets/telemost-active.svg");
 }
 
 .contacts__link_maps {
