@@ -8,7 +8,7 @@ const Copyrights = () => {
       target="_blank"
       title="github"
     >
-      2025 Julia Fokanova
+      2025 — 2026 Julia Fokanova
     </a>
   );
 };
